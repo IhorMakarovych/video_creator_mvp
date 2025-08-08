@@ -1,7 +1,10 @@
 from pydantic import BaseModel
 
+
 class PromptRequest(BaseModel):
-    topic: str  # тема для генерації промта, наприклад "Барселона на світанку"
+    topic: str
+
 
 class PromptResponse(BaseModel):
-    prompt: str  # готовий промт для генерації відео
+    prompt: str
+    video_url: str | None = None
