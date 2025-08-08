@@ -16,7 +16,6 @@ client = OpenAI(api_key=api_key)
 
 def generate_video_prompt(topic: str, max_words: int = 50) -> str:
     """Генерує кінематографічний промт для Runway, ніколи не повертає порожній."""
-    logging.info(f"[PROMPT] Generating prompt for topic: {topic!r}")
 
     response = client.chat.completions.create(
         model="gpt-4o-mini",

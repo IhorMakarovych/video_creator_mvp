@@ -2,6 +2,11 @@ from fastapi import FastAPI
 from app.schemas.prompt import PromptRequest, PromptResponse
 from app.services.openai_service import generate_video_prompt
 from app.utils.prompt_utils import clean_prompt
+from app.logging_config import setup_logging
+import logging
+
+setup_logging()
+logger = logging.getLogger(__name__)
 
 app = FastAPI()
 
