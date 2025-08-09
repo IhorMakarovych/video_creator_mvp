@@ -7,6 +7,7 @@ import logging
 
 app = FastAPI()
 
+
 @app.post("/generate-video", response_model=PromptResponse)
 def create_video(request: PromptRequest):
     # 1. Генеруємо промт
